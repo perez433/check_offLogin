@@ -1,19 +1,9 @@
-from flask import Flask, request, jsonify
+    app.run(debug=True) from flask import Flask, request, jsonify
 import requests
-import threading
 from colorama import init, Fore
 
 # Initialize colorama for colored output in terminal
 init(autoreset=True)
-
-# Define colors for output
-red = Fore.RED
-green = Fore.GREEN
-white = Fore.WHITE
-blue = Fore.BLUE
-yellow = Fore.YELLOW
-cyan = Fore.CYAN
-background = white + green
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -88,4 +78,4 @@ def check_email():
 
 # Run the Flask app
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(host='0.0.0.0', port=5000, debug=True)
